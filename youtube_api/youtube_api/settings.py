@@ -60,9 +60,9 @@ from datetime import timedelta
 from celery.schedules import crontab
 
 CELERY_BEAT_SCHEDULE = {
-    'youtube-api-request-every-10-seconds': {
+    'youtube-api-request-every-30-seconds': {
         'task': 'search.tasks.youtube_api_request',
-        'schedule': timedelta(seconds=10),
+        'schedule': timedelta(seconds=30),
     },
 }
 
@@ -148,4 +148,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-YOUTUBE_DATA_API_KEY = 'AIzaSyBzW714KfsqGTEVMfDB0Yhsqq4x7qN255M'
+YOUTUBE_DATA_API_KEYS = ['AIzaSyBzW714KfsqGTEVMfDB0Yhsqq4x7qN255M', 'AIzaSyBND1As-Rly8Cxe1hjl-djP1MJwKcsupbw', 'AIzaSyBOs6pe1H_xAPYpRSbaLwNOxqC6Hvruh7E', 'AIzaSyAk9Tk-m6GZ6OCSMlOOwyhz5ui-9VL_7so','AIzaSyBImoTepAKTtkKuCNWgcXyAjCBByn806Lc','AIzaSyCEKD42ehcTXIGBkCn8kCnYr9yrjt2j9_I','AIzaSyDn0wbm40ds5INTZA7nTh2ym-7isjwZFj0','AIzaSyCNsiTh75CUB2wK0RK9HDnbHvVYvly_ga4','AIzaSyDD4vhpo1kTzSZioUl2WsK3Jua3Mt99q6U','AIzaSyCp1JoAL1b5_qo8zwaczR3eB3B-tYtKoaU','AIzaSyBh62TZvxSp9YjgtaCF1BCSrVC36qKPk5Y','AIzaSyAift4ERkPf9CPub804rVXGOQZaSmzF5R0','AIzaSyBRrMJNPejcShw5k0FAhFDxAwRM2NVopwI','AIzaSyD6lrBYGy0CtpWsjMqOkI7AfCCfMSouCPw','AIzaSyBkBC8jyw-fDVnRWBH-umYrUpix8fWg0nk', 'AIzaSyAzfCEA_ABbUFPXTH1R-y4vi7njVmfV0oM', 'AIzaSyCS_SDIv2O-cUAPfG0FrWKLNcP0ChuX8_o','AIzaSyCPYzChNw5UdG88GZunZgVPFReruXQGRz8','AIzaSyAj-40I594ELwrL-K3GTCC4pmMB4nHJdjU','AIzaSyDtMNw10OFBaLbxKi-2j07jJP-zjxWS4eQ','AIzaSyCzdqlqqlO5gFP95cu6CG_hRewAFvVWLLw','AIzaSyBhZYgJsCaDoUwg6CrupmkwFWUgd3XRNbI', 'AIzaSyA998H2Niqpu_WuDioawNuc7X6at5NqsrI','AIzaSyBljwXmwqfX9e5d0SxdYKB_TcyL33TmCns','AIzaSyAdnLF-w8EUQ3aoEqR7aNjAnWIP242P3mo','AIzaSyAKnIjyMe-MpjIBTtZShB4_tCfI5Q2Ggo8','AIzaSyC_FX1Eydz9_E1x5_e9pnVBXqU3bfV3xak','AIzaSyC_CD6pjKUPIdp3oy_cFaVKbqeUl_rouEo','AIzaSyCUtpi-5o1YjqBHyKkjAoN_IomIBbAayPI','AIzaSyAWYqmc9iUnB4UKuFynMZ7UAcmEjJtlbe8','AIzaSyCxRANWH8JNyPqGM23f3RLqbNjQUNJ1F2k','AIzaSyBmaZytvm2toB9ysCoMPUKdupPcXVPu1B0','AIzaSyA2BGRBoq725VHEmPQVAbX9L21NJjTdFfg','AIzaSyB44sMrb5Iwslruyh6-gLiKezFtiBD2CUw','AIzaSyDp-yqbssExdyJ5gF_4T9qPOHIGhpg35hc','AIzaSyDGlYG0rOlkzKJ7lzvION9WwkE_bRzU0-I','AIzaSyBZ2Cn_yv_Cbbqh2aqtMEV-YdNrL7Jn2dA','AIzaSyCt4N8FKyw1c1MHAjir5wetpqKh5rIn0Ls','AIzaSyDxgMq387s4-GADqFlH33xJpaPpEX8qVfA','AIzaSyD1uL_pWCzumoSNqT4V6O4JvAX0p42onX4','AIzaSyCPTjLfaJaVKzPDAEx0KijeWE6a7JAxYLM','AIzaSyAiI952UN2EN4AQcfyLlQykMmk3WSZAOgM']

@@ -8,15 +8,18 @@ import requests
 from isodate import parse_duration
 from django.conf import settings
 from django.shortcuts import render
+import random
 
 @shared_task
 def youtube_api_request():
     search_url = 'https://www.googleapis.com/youtube/v3/search'
     video_url = 'https://www.googleapis.com/youtube/v3/videos'
+    API_KEYS = settings.YOUTUBE_DATA_API_KEYS
+    ran = random.randint(0, len(API_KEYS) - 1)
     search_params = {
         'part': 'snippet',
         'q': 'cricket',
-        'key': settings.YOUTUBE_DATA_API_KEY,
+        'key': API_KEYS[ran],
         'maxResults': 50,
         'type': 'video',
     }
@@ -25,9 +28,9 @@ def youtube_api_request():
     results = r.json()['items']
     for result in results:
         video_ids.append(result['id']['videoId'])
-
+    ran = random.randint(0, len(API_KEYS) - 1)
     video_params = {
-        'key': settings.YOUTUBE_DATA_API_KEY,
+        'key': API_KEYS[ran],
         'part': 'snippet,contentDetails,statistics',
         'id': ','.join(video_ids),
         'maxResults': 50,
