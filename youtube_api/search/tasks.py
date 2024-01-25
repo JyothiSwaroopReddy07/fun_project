@@ -12,6 +12,9 @@ import random
 
 @shared_task
 def youtube_api_request():
+    """
+    this is a celery asynchronous task to fetch youtube video data for every 30seconds and update it to database
+    """
     search_url = 'https://www.googleapis.com/youtube/v3/search'
     video_url = 'https://www.googleapis.com/youtube/v3/videos'
     API_KEYS = settings.YOUTUBE_DATA_API_KEYS
