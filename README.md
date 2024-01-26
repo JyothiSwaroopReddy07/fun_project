@@ -69,11 +69,11 @@ The backend server should now be running on http://localhost:8000.
    ### Get Videos
    - **Method**: GET
    - **EndPoint**: /videos
-   - **Params**:
-           - search="searchString" (search using title of video)
-           - category="Field used to sort the data" {"views","comments","likes","favorites","upload_date"}
-           - order = "asc" or "desc" {sorting in ascending or descending order"}
-           - page = page number of the response
+   - **Params**: Things used for filtering,sorting,paginations,searching
+           - **search**="searchString" (search using title of video)
+           - **category**="Field used to sort the data" {"views","comments","likes","favorites","upload_date"}
+           - **order** = "asc" or "desc" {sorting in ascending or descending order"}
+           - **page** = page number of the response
 
    - **Example**: http://127.0.0.1:8000/videos/?search=z&category=likeCount&order=desc&page=1
    - **Response**:
