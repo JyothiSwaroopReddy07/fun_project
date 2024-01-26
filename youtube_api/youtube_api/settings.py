@@ -25,7 +25,30 @@ SECRET_KEY = 'django-insecure-l-un4c2#5g1lrj+4^qtfhsmm1b%bug*q_%rk!sepvol2b4_-73
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_ALLOW_ALL=True
+
+CORS_ALLOWED_ORIGINS = [
+
+    "http://localhost:8080",
+    "http://127.0.0.1:9000",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'Authorization',
+    'content-type',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    # 'Token', # Add any custom headers here
+]
+
 
 
 # Application definition
@@ -40,6 +63,7 @@ INSTALLED_APPS = [
     'search',
     'rest_framework',
     'django_filters',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 # settings.py
