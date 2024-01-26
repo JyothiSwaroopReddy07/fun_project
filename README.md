@@ -15,6 +15,9 @@ This is a youtube video finder which uses celery to run asynchronous tasks and p
 6. Utilized pagination concepts to fetch data in bundle of 10's to frontend
 7. Utilized more than 30 API keys of Youtube data v3 api which selects the api key at random and reduce chance of expiration of quota of api requests
 
+## System Architecture
+![Screenshot (101)](https://github.com/JyothiSwaroopReddy07/fun_project/assets/107217455/a5bf0175-2cbe-40d3-b192-388af8809415)
+
 
 ## Getting Started
 
