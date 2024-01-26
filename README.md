@@ -129,6 +129,15 @@ This starts the celery to work
    ```
 The backend server should now be running on http://localhost:3000.
 
+## Result ScreenShots
+
+![Screenshot (98)](https://github.com/JyothiSwaroopReddy07/fun_project/assets/107217455/059e60ef-5e29-458c-9f10-46460812e712)
+
+![Screenshot (99)](https://github.com/JyothiSwaroopReddy07/fun_project/assets/107217455/4c9723d8-9c5d-40a4-a086-c671f19b27a3)
+
+![Screenshot (100)](https://github.com/JyothiSwaroopReddy07/fun_project/assets/107217455/c396fd5b-8d26-40af-badb-fbb4a6bbb7cc)
+
+
 ##  Note: Make sure the port numbers are same as mentioned
 
 
