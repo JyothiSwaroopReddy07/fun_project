@@ -5,7 +5,7 @@ This is a youtube video finder which uses celery to run asynchronous tasks and p
 - **Asynchronous tasks:** celery, redis server
 - **frontend:** Reactjs
 - **database:** Sqlite3
-
+### My YouTube Search Theme is Cricket
 ## Features
 1. Celery to fetch data from youtube every 30 seconds
 2. Pushing the data into data base and fetching it.
