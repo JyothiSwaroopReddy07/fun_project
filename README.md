@@ -64,6 +64,81 @@ This is a youtube video finder which uses celery to run asynchronous tasks and p
 
 The backend server should now be running on http://localhost:8000.
 
+## API ENDPOINTS
+
+   ### Get Videos
+   - **Method**: GET
+   - **EndPoint**: /videos
+   - **Params**:
+           1. search="searchString" (search using title of video)
+           2. category="Field used to sort the data" {"views","comments","likes","favorites","upload_date"}
+           3. order = "asc" or "desc" {sorting in ascending or descending order"}
+           4. page = page number of the response
+
+   - **Example**: http://127.0.0.1:8000/videos/?search=z&category=likeCount&order=desc&page=1
+   - **Response**:
+     ```bash
+            HTTP 200 OK
+            Allow: GET
+            Content-Type: application/json
+            Vary: Accept
+            
+            {
+                "success": {
+                    "count": 4,
+                    "next": null,
+                    "previous": null,
+                    "results": [
+                        {
+                            "id": "PeXfQ1t2ALw",
+                            "title": "Yuzvendra chahal and Ishan Kishan funny moment😂 #cricket #shorts",
+                            "thumbnail": "https://i.ytimg.com/vi/PeXfQ1t2ALw/hqdefault.jpg",
+                            "publishedAt": "2024-01-09T09:20:57Z",
+                            "duration": 0,
+                            "viewCount": 3678729,
+                            "likeCount": 177583,
+                            "commentCount": 82,
+                            "favoriteCount": 0
+                        },
+                        {
+                            "id": "2437RbesXDQ",
+                            "title": "NZ vs PAK 3rd T20I - Cricket Highlights | Prime Video India",
+                            "thumbnail": "https://i.ytimg.com/vi/2437RbesXDQ/hqdefault.jpg",
+                            "publishedAt": "2024-01-17T06:15:00Z",
+                            "duration": 16,
+                            "viewCount": 4338324,
+                            "likeCount": 64013,
+                            "commentCount": 3392,
+                            "favoriteCount": 0
+                        },
+                        {
+                            "id": "dviUIdnTz-A",
+                            "title": "IND 119/1 Jaiswal Bazzball Vs Eng, Pak Media Shocked | India Destroy Eng! But Eng 500 V Pak on Day 1",
+                            "thumbnail": "https://i.ytimg.com/vi/dviUIdnTz-A/hqdefault.jpg",
+                            "publishedAt": "2024-01-25T11:46:31Z",
+                            "duration": 20,
+                            "viewCount": 43348,
+                            "likeCount": 2257,
+                            "commentCount": 68,
+                            "favoriteCount": 0
+                        },
+                        {
+                            "id": "2Zv8BvnnWjg",
+                            "title": "JAISWAL ‘HEARTLESS’ AGAINST HARTLEY AS INDIA NOT ENGLAND PLAY BAZBALL IN HYD TEST…PCB AIK AUR KAMAAL",
+                            "thumbnail": "https://i.ytimg.com/vi/2Zv8BvnnWjg/hqdefault.jpg",
+                            "publishedAt": "2024-01-25T11:51:44Z",
+                            "duration": 22,
+                            "viewCount": 41119,
+                            "likeCount": 1678,
+                            "commentCount": 131,
+                            "favoriteCount": 0
+                        }
+                    ]
+                }
+            }
+     ```
+
+
 
 ## Redis server Installation
 
